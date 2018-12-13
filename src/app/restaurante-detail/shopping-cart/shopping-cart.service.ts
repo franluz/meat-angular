@@ -1,6 +1,5 @@
 import { CartItem } from "./cart-item.model";
 import { MenuItem } from "../menu-item/menu-items.model";
-import { MenuItemComponent } from "../menu-item/menu-item.component";
 
 export class ShoppingCartService {
     items: CartItem[] = []
@@ -9,9 +8,6 @@ export class ShoppingCartService {
     }
    
     total(): number{
-        console.log("itens Total: "+this.items
-          .map(item => item.value())
-          .reduce((prev, value)=> prev+value, 0))
           
         return this.items
           .map(item => item.value())
